@@ -2,7 +2,7 @@
 layout:     post
 title:      "CoMM"
 subtitle:   "A Coherent Interleaved Image-Text Dataset for Multimodal Understanding and Generation"
-arxiv:      "https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_CoMM_A_Coherent_Interleaved_Image-Text_Dataset_for_Multimodal_Understanding_and_CVPR_2025_paper.pdf"
+arxiv:      "https://arxiv.org/pdf/2406.10462"
 date:       2025-04-02
 author:     "Wei Chen, Lin Li, Yongqi Yang, Bin Wen, Fan Yang, Tingting Gao, Yu Wu, Long Chen"
 img: "img/CoMM.jpg"
