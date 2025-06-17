@@ -56,7 +56,47 @@ description: "Mastering multimodal intelligence for limitless creation and under
   "></span>
 </h1>
 
+
 {% for post in paginator.posts %}
+<div class="post-preview-container">
+    <!-- 左侧图片区域 -->
+    <div class="post-preview-image">
+        <a href="{{ post.arxiv }}">
+            <img src="{{ post.img | prepend: site.baseurl }}" alt="{{ post.title }}">
+        </a>
+    </div>
+    
+    <!-- 右侧内容区域 -->
+    <div class="post-preview-content">
+        <a href="{{ post.arxiv }}" class="post-preview-link">
+            <div class="post-preview">
+                <h2 class="post-title">
+                    {{ post.title }}
+                </h2>
+                {% if post.subtitle %}
+                <h3 class="post-subtitle">
+                    {{ post.subtitle }}
+                </h3>
+                {% endif %}
+                <div class="post-content-preview">
+                    {% if post.lang == 'en' %}
+                        {{ post.content | strip_html | truncate:300 }}
+                    {% else %}
+                        {{ post.content | strip_html | truncate:200 }}
+                    {% endif %}
+                </div>
+            </div>
+        </a>
+        <p class="post-meta">
+            Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+        </p>
+    </div>
+</div>
+<hr>
+{% endfor %}
+
+
+<!-- {% for post in paginator.posts %}
 <a href="{{ post.arxiv }}" class="post-preview-link">
     <div class="post-preview">
         <h2 class="post-title">
@@ -80,7 +120,7 @@ description: "Mastering multimodal intelligence for limitless creation and under
     </p>
 </div>
 <hr>
-{% endfor %}
+{% endfor %} -->
 
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}
