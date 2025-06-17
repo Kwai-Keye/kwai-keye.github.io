@@ -2,7 +2,7 @@
 layout:     post
 title:      "Example Post"
 subtitle:   "ES5, ES6, ES2016, ES.Next: What's going on with JavaScript versioning?"
-url:        "https://arxiv.org/pdf/2502.09925"
+arxiv:        "https://arxiv.org/pdf/2502.09925"
 date:       2015-09-22
 author:     "Hux"
 header-img: "img/post-bg-js-version.jpg"
