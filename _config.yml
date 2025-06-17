@@ -6,7 +6,7 @@ email: Keye@kuaishou.com
 description: ""
 keyword: ""
 url: "https://kwai-keye.github.io/"              # your host, for absolute URL
-baseurl: ""         # for example, '/blog' if Kwai Keye hosted on 'host/blog'
+baseurl: "https://github.com/Kwai-Keye/kwai-keye.github.io/"         # for example, '/blog' if Kwai Keye hosted on 'host/blog'
 
 future: true
 
