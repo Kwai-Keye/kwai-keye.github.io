@@ -2,6 +2,7 @@
 layout:     post
 title:      "TASKGALAXY"
 subtitle:   "SCALING MULTI-MODAL INSTRUCTION FINE-TUNING WITH TENS OF THOUSANDS VISION TASK TYPES"
+arxiv:      "https://arxiv.org/pdf/2502.09925"
 date:       2025-02-14
 author:     "Jiankang Chen, Tianke Zhang, Changyi Liu, Haojie Ding, Yaya Shi, Feng Cheng, Huihui Xiao, Bin Wen, Fan Yang, Tingting Gao, Di Zhang"
 img: "img/TASKGALAXY.jpg"
