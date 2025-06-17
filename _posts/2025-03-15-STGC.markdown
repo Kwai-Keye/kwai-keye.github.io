@@ -1,0 +1,9 @@
+---
+layout:     post
+title:      "STGC"
+subtitle:   "SOLVING TOKEN GRADIENT CONFLICT IN MIXTUREOF-EXPERTS FOR LARGE VISION-LANGUAGE MODEL"
+date:       2025-03-15
+author:     "Longrong Yang, Dong Shen, Chaoxiang Cai, Fan Yang, Tingting Gao, Di Zhang, Xi Li"
+header-img: "img/post-bg-2015.jpg"
+---
+
