@@ -1,0 +1,9 @@
+---
+layout:     post
+title:      "SVBENCH"
+subtitle:   "A BENCHMARK WITH TEMPORAL MULTITURN DIALOGUES FOR STREAMING VIDEO UNDERSTANDING"
+date:       2025-02-15
+author:     "Zhenyu Yang, Yuhang Hu, Zemin Du, Dizhan Xue, Shengsheng Qian, Jiahong Wu, Fan Yang, Weiming Dong, Changsheng Xu"
+header-img: "img/post-bg-2015.jpg"
+---
+
