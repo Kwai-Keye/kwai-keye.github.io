@@ -1,434 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kwai Keye - Multimodal Intelligence</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #5e72e4;
-            --secondary: #8392ab;
-            --accent: #11cdef;
-            --light: #f7fafc;
-            --dark: #344767;
-            --soft-blue: #e6f7ff;
-            --soft-purple: #f0ebff;
-            --soft-green: #e6f7f0;
-            --soft-pink: #fce8f3;
-            --shadow: rgba(136, 152, 170, 0.15);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background: linear-gradient(135deg, #f5f7fa 0%, #f0f2f5 100%);
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        header {
-            text-align: center;
-            padding: 40px 0;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 7px 14px var(--shadow);
-            margin-bottom: 40px;
-            background: linear-gradient(to right bottom, white, #f8f9ff);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        header::before {
-            content: "";
-            position: absolute;
-            top: -100px;
-            right: -100px;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: radial-gradient(circle, var(--soft-blue), transparent 70%);
-            opacity: 0.5;
-            z-index: 0;
-        }
-        
-        header::after {
-            content: "";
-            position: absolute;
-            bottom: -80px;
-            left: -80px;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: radial-gradient(circle, var(--soft-pink), transparent 70%);
-            opacity: 0.4;
-            z-index: 0;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .logo-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 16px;
-            box-shadow: 0 4px 6px rgba(94, 114, 228, 0.3);
-        }
-        
-        .logo-icon i {
-            font-size: 28px;
-            color: white;
-        }
-        
-        .logo-text {
-            font-size: 2.8rem;
-            font-weight: 700;
-            background: linear-gradient(to right, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: -1px;
-        }
-        
-        .tagline {
-            font-size: 1.1rem;
-            color: var(--secondary);
-            max-width: 700px;
-            margin: 0 auto 25px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .mission {
-            background: white;
-            border-radius: 16px;
-            padding: 25px 30px;
-            margin: 0 auto 30px;
-            max-width: 800px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            border-left: 4px solid var(--accent);
-            position: relative;
-            z-index: 1;
-            font-size: 1.1rem;
-            color: #525f7f;
-        }
-        
-        .links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .link-button {
-            display: flex;
-            align-items: center;
-            padding: 12px 24px;
-            background: white;
-            border-radius: 12px;
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 600;
-            box-shadow: 0 4px 6px var(--shadow);
-            transition: all 0.3s ease;
-            border: 1px solid #e9ecef;
-        }
-        
-        .link-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 7px 14px var(--shadow);
-        }
-        
-        .link-button i {
-            margin-right: 8px;
-            font-size: 1.2rem;
-        }
-        
-        .website { color: var(--primary); }
-        .github { color: #333; }
-        .huggingface { color: #ffd21e; }
-        
-        h1.section-title {
-            font-size: 2rem;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #e9ecef;
-            color: var(--dark);
-            position: relative;
-        }
-        
-        h1.section-title::after {
-            content: "";
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 120px;
-            height: 3px;
-            background: linear-gradient(to right, var(--primary), var(--accent));
-            border-radius: 3px;
-        }
-        
-        .research-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-        
-        .research-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px var(--shadow);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        
-        .research-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px var(--shadow);
-        }
-        
-        .card-header {
-            padding: 25px 25px 15px;
-            background: linear-gradient(to right, var(--soft-purple), var(--soft-blue));
-        }
-        
-        .card-title {
-            font-size: 1.4rem;
-            margin-bottom: 8px;
-            color: var(--dark);
-        }
-        
-        .card-subtitle {
-            font-size: 1.1rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-weight: 500;
-        }
-        
-        .card-content {
-            padding: 20px 25px;
-            flex-grow: 1;
-            color: #525f7f;
-        }
-        
-        .card-meta {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px 25px;
-            background: var(--light);
-            border-top: 1px solid #e9ecef;
-            font-size: 0.9rem;
-            color: var(--secondary);
-        }
-        
-        .pagination {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 40px 0;
-        }
-        
-        .page-button {
-            padding: 10px 20px;
-            background: white;
-            border: 1px solid #e9ecef;
-            border-radius: 10px;
-            color: var(--dark);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-        }
-        
-        .page-button:hover {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-        
-        .page-button i {
-            margin: 0 5px;
-        }
-        
-        .footer {
-            text-align: center;
-            padding: 30px;
-            color: var(--secondary);
-            font-size: 0.9rem;
-            margin-top: 40px;
-            border-top: 1px solid #e9ecef;
-        }
-        
-        @media (max-width: 768px) {
-            .research-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            header {
-                padding: 30px 20px;
-            }
-            
-            .logo-text {
-                font-size: 2.2rem;
-            }
-            
-            .mission {
-                padding: 20px;
-            }
-        }
-        
-        .ai-badge {
-            display: inline-block;
-            background: linear-gradient(to right, var(--primary), var(--accent));
-            color: white;
-            padding: 3px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-left: 10px;
-            vertical-align: middle;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-brain"></i>
-                </div>
-                <div class="logo-text">Kwai Keye</div>
-            </div>
-            <p class="tagline">Mastering multimodal intelligence for limitless creation and understanding</p>
-            
-            <div class="mission">
-                Welcome to Kwai Keye – your intelligent multimodal assistant, developed by Kuaishou's foundational model team. We evolve continuously through massive data and knowledge, mastering visual understanding, multilingual communication, creative copywriting, logical reasoning, and code generation. Stay tuned for cutting-edge updates!
-            </div>
-            
-            <div class="links">
-                <a href="https://keye.kuaishou.com" class="link-button website">
-                    <i class="fas fa-globe"></i> Official Website
-                </a>
-                <a href="https://github.com/Kwai-Keye" class="link-button github">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://huggingface.co/Kwai-Keye" class="link-button huggingface">
-                    <i class="fas fa-robot"></i> Hugging Face
-                </a>
-            </div>
-        </header>
-        
-        <h1 class="section-title">Recent Researches</h1>
-        
-        <div class="research-grid">
-            <!-- Research Card 1 -->
-            <div class="research-card">
-                <div class="card-header">
-                    <h2 class="card-title">Multimodal Fusion for Visual Question Answering</h2>
-                    <h3 class="card-subtitle">Integrating vision and language for context-aware AI</h3>
-                </div>
-                <div class="card-content">
-                    <p>This research introduces a novel attention-based fusion mechanism that dynamically combines visual and textual features. Our approach achieves state-of-the-art results on VQA benchmarks by effectively modeling the interplay between image regions and question semantics.</p>
-                    <p>The proposed architecture reduces computational complexity by 40% while improving accuracy on complex reasoning tasks. We demonstrate significant improvements in handling ambiguous questions and out-of-distribution scenarios.</p>
-                </div>
-                <div class="card-meta">
-                    <span>Posted by Keye Research Team</span>
-                    <span>August 15, 2023</span>
-                </div>
-            </div>
-            
-            <!-- Research Card 2 -->
-            <div class="research-card">
-                <div class="card-header">
-                    <h2 class="card-title">Cross-lingual Transfer Learning with Minimal Supervision</h2>
-                    <h3 class="card-subtitle">Breaking language barriers in multimodal AI</h3>
-                </div>
-                <div class="card-content">
-                    <p>We present a new framework for zero-shot cross-lingual transfer that leverages multimodal alignment. By projecting representations from multiple languages into a shared visual-semantic space, our model achieves 85% of supervised performance with no target-language annotations.</p>
-                    <p>The method significantly outperforms existing approaches on low-resource languages, with particular strength in morphologically rich languages. Our analysis reveals that visual grounding provides a powerful regularization for cross-lingual generalization.</p>
-                </div>
-                <div class="card-meta">
-                    <span>Posted by Dr. Li Wei</span>
-                    <span>July 28, 2023</span>
-                </div>
-            </div>
-            
-            <!-- Research Card 3 -->
-            <div class="research-card">
-                <div class="card-header">
-                    <h2 class="card-title">Efficient Transformers for Video Understanding</h2>
-                    <h3 class="card-subtitle">Scaling multimodal models to long-form content</h3>
-                </div>
-                <div class="card-content">
-                    <p>This paper addresses the computational challenges in processing long video sequences by introducing a sparse attention mechanism with temporal hierarchy. Our model reduces memory requirements by 60% while maintaining competitive accuracy on action recognition and temporal localization tasks.</p>
-                    <p>We demonstrate the effectiveness of our approach on diverse datasets including Kinetics-700 and AViD. The proposed architecture enables real-time processing of hour-long videos with minimal quality degradation.</p>
-                </div>
-                <div class="card-meta">
-                    <span>Posted by Video AI Group</span>
-                    <span>July 10, 2023</span>
-                </div>
-            </div>
-            
-            <!-- Research Card 4 -->
-            <div class="research-card">
-                <div class="card-header">
-                    <h2 class="card-title">Creative Content Generation with Guided Diffusion</h2>
-                    <h3 class="card-subtitle">Pushing the boundaries of AI-assisted creativity</h3>
-                </div>
-                <div class="card-content">
-                    <p>We propose a novel multimodal diffusion model that integrates textual, visual, and stylistic controls for creative content generation. Our approach enables fine-grained manipulation of generated outputs through natural language instructions and visual references.</p>
-                    <p>The model demonstrates unprecedented coherence in generating complex scenes with multiple objects and relationships. Human evaluation shows our outputs are preferred over competitors in 78% of cases for both fidelity and creativity.</p>
-                </div>
-                <div class="card-meta">
-                    <span>Posted by Creative AI Lab</span>
-                    <span>June 25, 2023</span>
-                </div>
-            </div>
+---
+layout: page
+description: "Mastering multimodal intelligence for limitless creation and understanding."
+---
+
+<p style="text-align: center; max-width: 800px; margin: 20px auto;">
+  Welcome to Kwai Keye – your intelligent multimodal assistant, developed by Kuaishou's foundational model team. We evolve continuously through massive data and knowledge, mastering visual understanding, multilingual communication, creative copywriting, logical reasoning, and code generation. Stay tuned for cutting-edge updates! Access Kwai Keye’s full capabilities now on https://keye.kuaishou.com, https://github.com/Kwai-Keye, and https://huggingface.co/Kwai-Keye. Let’s explore the future of AI together! 🚀
+</p>
+<h1 style="text-align: left;">Recent Researches</h1>
+
+{% for post in paginator.posts %}
+<a href="{{ post.arxiv }}" class="post-preview-link">
+    <div class="post-preview">
+        <h2 class="post-title">
+            {{ post.title }}
+        </h2>
+        {% if post.subtitle %}
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
+        </h3>
+        {% endif %}
+        <div class="post-content-preview">
+            {% if post.lang == 'en' %}
+                {{ post.content | strip_html | truncate:300 }}
+            {% else %}
+                {{ post.content | strip_html | truncate:200 }}
+            {% endif %}
         </div>
-        
-        <div class="pagination">
-            <button class="page-button">
-                <i class="fas fa-arrow-left"></i> Newer Posts
-            </button>
-            <button class="page-button">
-                Older Posts <i class="fas fa-arrow-right"></i>
-            </button>
-        </div>
-        
-        <div class="footer">
-            <p>Kwai Keye - Advancing Multimodal Intelligence &copy; 2023</p>
-            <p>Let's explore the future of AI together! 🚀</p>
-        </div>
-    </div>
-</body>
-</html>
+    </a>
+    <p class="post-meta">
+        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+    </p>
+</div>
+<hr>
+{% endfor %}
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}
