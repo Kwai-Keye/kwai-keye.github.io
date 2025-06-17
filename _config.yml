@@ -69,7 +69,7 @@ ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
 ga_domain: huangxuan.me
 
 # Sidebar settings
-sidebar: False # whether or not using Sidebar.
+sidebar: false # whether or not using Sidebar.
 
 # Featured Tags
 featured-tags: true # whether or not using Feature-Tags
