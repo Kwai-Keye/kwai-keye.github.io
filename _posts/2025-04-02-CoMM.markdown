@@ -1,0 +1,9 @@
+---
+layout:     post
+title:      "CoMM"
+subtitle:   "A Coherent Interleaved Image-Text Dataset for Multimodal Understanding and Generation"
+date:       2025-04-02
+author:     "Wei Chen, Lin Li, Yongqi Yang, Bin Wen, Fan Yang, Tingting Gao, Yu Wu, Long Chen"
+header-img: "img/post-bg-unix-linux.jpg"
+---
+
