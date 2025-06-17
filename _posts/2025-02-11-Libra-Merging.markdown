@@ -2,6 +2,7 @@
 layout:     post
 title:      "Libra-Merging"
 subtitle:   "Importance-redundancy and Pruning-merging Trade-off for Acceleration Plug-in in Large Vision-Language Model"
+arxiv:      "https://openaccess.thecvf.com/content/CVPR2025/supplemental/Yang_Libra-Merging_Importance-redundancy_and_CVPR_2025_supplemental.pdf"
 date:       2025-02-11
 author:     "Longrong Yang, Dong Shen, Chaoxiang Cai, Kaibing Chen, Fan Yang, Tingting Gao, Di Zhang, Xi Li"
 img: "img/Libra-Merging.jpg"
