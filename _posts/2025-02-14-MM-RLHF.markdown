@@ -1,0 +1,9 @@
+---
+layout:     post
+title:      "MM-RLHF"
+subtitle:   "The Next Step Forward in Multimodal LLM Alignment"
+arxiv:     "https://arxiv.org/pdf/2502.10391"
+date:       2025-02-14
+author:     "Yi-Fan Zhang, Tao Yu, Haochen Tian, Chaoyou Fu, Peiyan Li, Jianshu Zeng, Wulin Xie, Yang Shi, Huanyu Zhang, Junkang Wu, Xue Wang, Yibo Hu, Bin Wen, Fan Yang, Zhang Zhang, Tingting Gao, Di Zhang, Liang Wang, Rong Jin, Tieniu Tan"
+header-img: "img/post-bg-js-version.jpg"
+---
