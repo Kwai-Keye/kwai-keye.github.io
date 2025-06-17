@@ -1,3 +1,42 @@
+.post-preview-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.post-preview-image {
+    flex: 0 0 150px; /* 固定宽度150px */
+}
+
+.post-preview-image img {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.post-preview-content {
+    flex: 1; /* 占据剩余空间 */
+}
+
+@media (max-width: 768px) {
+    .post-preview-container {
+        flex-direction: column;
+    }
+    .post-preview-image {
+        flex: 1 0 auto;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 15px;
+    }
+}
+
+
+
+
+
 @media (min-width: 1200px) {
   .post-container,
   .sidebar-container {
