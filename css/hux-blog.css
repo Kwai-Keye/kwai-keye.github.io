@@ -21,7 +21,7 @@
     flex: 1; /* 占据剩余空间 */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
     .post-preview-container {
         flex-direction: column;
     }
