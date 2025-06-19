@@ -1,4 +1,4 @@
-# Kwai Keye: Multimodal Large Model
+# Kwai Keye: Multimodal Large Language Model
 
 [![Project Page](https://img.shields.io/badge/Project-Page-9cf?logo=github&link=https%3A%2F%2Fkwai-keye.github.io%2F)](https://kwai-keye.github.io/)
 [![Latest Version](https://img.shields.io/badge/Updated-June%202025-brightgreen)]()
