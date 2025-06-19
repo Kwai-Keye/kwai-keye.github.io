@@ -32,7 +32,159 @@
         margin: 0 auto 15px;
     }
 }
+.container {
+      max-width: 1800px; /* 增加最大宽度 */
+      margin: 50px auto;
+      padding: 0 30px; /* 增加内边距 */
+    }
+    
+.welcome-card {
+  text-align: center;
+  margin: 40px auto;
+  padding: 45px; /* 增加内边距 */
+  background: linear-gradient(135deg, #f8faff 0%, #f1f8ff 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(140, 180, 220, 0.12);
+  border: 1px solid #e6f0fa;
+  font-size: 1.1em;
+  line-height: 1.65;
+  position: relative;
+  overflow: hidden;
+  max-width: 1600px; /* 增加卡片最大宽度 */
+}
 
+.circle-top {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(45deg, #6a9bd8, #4a6fa5);
+  border-radius: 50%;
+  opacity: 0.08;
+}
+
+.circle-bottom {
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(45deg, #3a5f95, #5a8fd8);
+  border-radius: 50%;
+  opacity: 0.08;
+}
+
+.welcome-title {
+  display: block;
+  font-size: 2em; /* 增大标题 */
+  font-weight: 700;
+  margin-bottom: 25px;
+  background: linear-gradient(45deg, #5a8fd8, #3a5f95);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  z-index: 2;
+  letter-spacing: -0.5px;
+}
+
+.welcome-text {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto 30px;
+  max-width: 1000px; /* 增加文本区域宽度 */
+  font-size: 1.15em; /* 增大字体 */
+}
+
+.research-focus {
+  padding: 25px 35px; /* 增加内边距 */
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(74, 111, 165, 0.15);
+  text-align: left;
+  position: relative;
+  z-index: 2;
+  max-width: 1000px; /* 增加内容区域宽度 */
+  margin: 0 auto;
+}
+
+.research-title {
+  margin: 0 0 15px 0;
+  font-weight: 600;
+  color: #3a5f95;
+  font-size: 1.2em; /* 增大标题 */
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 增加列宽 */
+  gap: 15px; /* 增加间距 */
+}
+
+.research-item {
+  background: rgba(90, 143, 216, 0.08);
+  border-radius: 10px;
+  padding: 15px 18px; /* 增加内边距 */
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.research-item:hover {
+  background: rgba(90, 143, 216, 0.15);
+  transform: translateY(-3px);
+}
+
+.research-bullet {
+  width: 10px; /* 增大圆点 */
+  height: 10px;
+  background: #5a8fd8;
+  border-radius: 50%;
+  margin-right: 12px; /* 增加间距 */
+}
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1400px;
+    padding: 0 20px;
+  }
+  
+  .welcome-card {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .welcome-card {
+    padding: 35px;
+  }
+  
+  .research-focus {
+    padding: 20px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .welcome-card {
+    padding: 30px 20px;
+    margin: 30px auto;
+  }
+  
+  .welcome-title {
+    font-size: 1.7em;
+  }
+  
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 
 
