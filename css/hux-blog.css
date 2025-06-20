@@ -1,5 +1,4 @@
 .post-preview-container {
-    max-width: 1500px;
     display: flex;
     flex-direction: row;
     gap: 20px;
