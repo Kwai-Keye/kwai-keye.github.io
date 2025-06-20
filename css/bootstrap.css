@@ -227,7 +227,7 @@ th {
     page-break-inside: avoid;
   }
   img {
-    max-width: 100% !important;
+    max-: 100% !important;
   }
   p,
   h2,
@@ -451,7 +451,7 @@ th {
 .glyphicon-text-height:before {
   content: "\e050";
 }
-.glyphicon-text-width:before {
+.glyphicon-text-:before {
   content: "\e051";
 }
 .glyphicon-align-left:before {
@@ -1114,7 +1114,7 @@ img {
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   display: block;
-  max-width: 100%;
+  max-: 100%;
   height: auto;
 }
 .img-rounded {
@@ -1122,7 +1122,7 @@ img {
 }
 .img-thumbnail {
   display: inline-block;
-  max-width: 100%;
+  max-: 100%;
   height: auto;
   padding: 4px;
   line-height: 1.42857143;
@@ -1144,7 +1144,7 @@ hr {
 }
 .sr-only {
   position: absolute;
-  width: 1px;
+  : 1px;
   height: 1px;
   padding: 0;
   margin: -1px;
@@ -1155,7 +1155,7 @@ hr {
 .sr-only-focusable:active,
 .sr-only-focusable:focus {
   position: static;
-  width: auto;
+  : auto;
   height: auto;
   margin: 0;
   overflow: visible;
@@ -1285,7 +1285,7 @@ p {
   font-weight: 300;
   line-height: 1.4;
 }
-@media (min-width: 768px) {
+@media (min-: 768px) {
   .lead {
     font-size: 21px;
   }
@@ -1582,9 +1582,9 @@ pre code {
     width: 1170px;
   }
 }
-@media (min-width: 1800px) {
+@media (min-width: 2500px) {
   .container {
-    width: 1750px;
+    width: 2400px;
   }
 }
 .container-fluid {
