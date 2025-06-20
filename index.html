@@ -63,14 +63,7 @@ description: "Exploring AI Frontiers, Forging Multimodal Futures."
 
 {% for post in paginator.posts %}
 <div class="post-preview-container">
-    <!-- 左侧图片区域 -->
-    <div class="post-preview-image">
-        <a href="{{ post.arxiv }}">
-            <img src="{{ post.img | prepend: site.baseurl }}" alt="{{ post.title }}">
-        </a>
-    </div>
-    
-    <!-- 右侧内容区域 -->
+
     <div class="post-preview-content">
         <a href="{{ post.arxiv }}" class="post-preview-link">
             <div class="post-preview">
@@ -94,6 +87,12 @@ description: "Exploring AI Frontiers, Forging Multimodal Futures."
 <!--         <p class="post-meta">
             Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
         </p> -->
+    </div>
+  
+  <div class="post-preview-image">
+        <a href="{{ post.arxiv }}">
+            <img src="{{ post.img | prepend: site.baseurl }}" alt="{{ post.title }}">
+        </a>
     </div>
 </div>
 <hr>
