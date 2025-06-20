@@ -26,7 +26,10 @@
 
 
 @media (min-width: 1200px) {
-  .post-container,
+  .post-container{
+    width: 85%;
+    max-width: 1000px;
+  },
   .sidebar-container {
     padding-right: 5%;
   }
