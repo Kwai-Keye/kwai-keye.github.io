@@ -1,0 +1,748 @@
+body {
+  margin: 0;
+  font-family: "Epilogue", Arial, sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+.hero {
+  position: relative;
+  width: 100vw;
+  min-height: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  border-radius: 32px;
+  text-align: center;
+  color: #fff;
+  padding-top: 48px;
+}
+.hero-top {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 68px;
+  text-align: left;
+  padding-left: 48px;
+}
+.hero-overlay h1 {
+  font-size: 96px;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 48px;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+.hero-card {
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 32px;
+  padding: 12px 24px;
+  max-width: 682px;
+  max-height: 467px;
+  margin-bottom: 3vw;
+  color: #fff;
+  font-size: 24px;
+  font-family: "Epilogue", Arial, sans-serif;
+  font-weight: 300; /* Epilogue Light */
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+}
+.hero-card h5 {
+  display: inline-block;
+  padding: 8px 32px;
+  border: 1px solid #fff;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  background: rgba(255, 255, 255, 0.08);
+  margin-bottom: 24px;
+}
+
+.focus-section {
+  background: #f5f5f5;
+  padding: 64px 0 48px 0;
+  text-align: center;
+}
+.focus-section h2 {
+  font-size: 64px;
+  font-weight: 500;
+  margin-bottom: 48px;
+  font-family: "Epilogue", Arial, sans-serif;
+}
+.focus-list {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0.5vw;
+
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.focus-item {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 0 32px;
+}
+.focus-svg {
+  width: 97px;
+  height: 97px;
+  margin-bottom: 100px;
+}
+.focus-text {
+  font-family: "Epilogue", Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: #111;
+  line-height: 1.25;
+  text-align: left;
+  margin-top: 0;
+}
+.focus-divider {
+  width: 1px;
+  background: #dedddb;
+  margin: 0 0;
+  height: 341px;
+  align-self: center;
+}
+/* Responsive */
+@media (max-width: 900px) {
+  .focus-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .focus-item {
+    align-items: center;
+    text-align: center;
+    padding: 24px 0;
+  }
+  .focus-svg {
+    margin-bottom: 32px;
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+  }
+  .focus-text {
+    text-align: center;
+  }
+  .focus-divider {
+    width: 100%;
+    height: 1px;
+    margin: 24px 0;
+  }
+  .focus-item {
+    padding: 24px 0;
+    text-align: center;
+  }
+  .focus-text {
+    text-align: center;
+  }
+}
+
+/* Mobile: 去掉 icon，仅显示文字 */
+@media (max-width: 800px) {
+  .focus-svg {
+    display: none !important;
+  }
+  .focus-item {
+    padding: 16px 0;
+  }
+}
+
+/* Research */
+.research-section {
+  padding: 32px 0 0 0;
+  background: #fff;
+  text-align: center;
+}
+.research-section h2 {
+  font-size: 98px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.research-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.research-item {
+  position: relative;
+  width: 100%;
+  max-width: 1728px;
+  min-height: 780px;
+  margin: 2vh auto; /* 增加上下间距 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: auto 2vw; /* 增加内边距，左右保持响应式 */
+}
+
+.research-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  overflow: hidden;
+}
+
+.research-num {
+  position: relative;
+  z-index: 2;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background: #fff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  border: 1px solid #eee;
+}
+.research-inner-divider {
+  width: 1px;
+  height: 114px;
+  background: #111;
+  opacity: 0.12;
+  margin: 0 auto 18px auto;
+}
+.research-title {
+  position: relative;
+  z-index: 2;
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+  background: transparent;
+  padding: 0 12px;
+  text-align: center;
+  width: 936px;
+  min-height: 120px; /* 可选，保证有基础高度 */
+  height: auto; /* 让高度自适应内容 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: #111;
+  text-decoration: none;
+  font-family: "Epilogue", Arial, sans-serif;
+  transition: color 0.5s;
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+
+.research-title:hover,
+.research-title:focus {
+  background: linear-gradient(90deg, #f8a33b 0%, #6be8a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.research-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Research Item */
+.research-anim-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -220px;
+
+  transform: translateX(-50%) scale(1);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.4;
+}
+.bg1 .research-anim-bg {
+  left: 50%;
+  animation: anim-bg1-move-scale 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes anim-bg1-move-scale {
+  0% {
+    top: -220px;
+    width: 10vw;
+    transform: translateX(-50%) scale(0.2);
+    opacity: 0.4;
+  }
+  50% {
+    top: 80px;
+    width: 10vw;
+    transform: translateX(-50%) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    top: -220px;
+    width: 10vw;
+    transform: translateX(-50%) scale(0.2);
+    opacity: 0.4;
+  }
+}
+
+/* Research Item 2 Background */
+.bg2 .research-anim-bg {
+  left: 50%;
+  top: 50%;
+  width: 80vw;
+  height: 80vw;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 240px;
+  min-height: 240px;
+  transform: translate(-50%, -50%) scale(1);
+  animation: anim-bg2-scale-in 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite
+    alternate;
+}
+
+@keyframes anim-bg2-scale-in {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0.2;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0.4;
+  }
+}
+
+/* Research Item 3 Background */
+.bg3 .research-anim-bg {
+  left: 10%;
+  top: 10%;
+  animation: anim-bg3-move-scale 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+@keyframes anim-bg3-move-scale {
+  0% {
+    transform: translateX(-50%) scale(0.2);
+    opacity: 0.4;
+  }
+  50% {
+    left: 50%;
+    transform: translateX(-50%) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    transform: translateX(-50%) scale(0.2);
+    opacity: 0.4;
+  }
+}
+/* Research Item 4 Background */
+.bg4 .research-anim-bg {
+  left: 50%;
+  top: 10%;
+  animation: anim-bg4-move-scale 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+@keyframes anim-bg4-move-scale {
+  0% {
+    top: -100px;
+
+    transform: translateX(-50%) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    top: 200px;
+
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    top: -100px;
+    transform: translateX(-50%) scale(1);
+    opacity: 0.2;
+  }
+}
+
+/* Research Item 5 Background */
+.bg5 .research-anim-bg {
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  animation: anim-bg5-move-rotate 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite
+    alternate;
+}
+@keyframes anim-bg5-move-rotate {
+  0% {
+    left: 100%;
+    rotate: 0deg;
+    transform: translate(-50%, -50%) scale(0.1);
+    opacity: 0.2;
+  }
+  50% {
+    left: 50%;
+    rotate: 360deg;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    left: 10%;
+    rotate: 720deg;
+    transform: translate(-50%, -50%) scale(0.1);
+    opacity: 0.4;
+  }
+}
+
+/* Research Item 6 Background */
+.bg6 .research-anim-bg {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  animation: anim-bg6-move-scale 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite
+    alternate;
+}
+@keyframes anim-bg6-move-scale {
+  0% {
+    left: 10%;
+    top: 10%;
+    transform: translate(-50%, -50%) scale(0.1);
+    opacity: 0.2;
+  }
+  70% {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    opacity: 1;
+  }
+  100% {
+    left: 90%;
+    top: 90%;
+    transform: translate(-50%, -50%) scale(0.1);
+    opacity: 0.4;
+  }
+}
+/* Research Item 7 Background */
+.bg7 .research-anim-bg {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  animation: anim-bg7-move-scale 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite
+    alternate;
+}
+@keyframes anim-bg7-move-scale {
+  0% {
+    left: 10%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    opacity: 1;
+  }
+  70% {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    opacity: 0.6;
+  }
+  100% {
+    left: 90%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    opacity: 1;
+  }
+}
+/* Footer */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 0;
+  position: relative;
+  width: 100vw;
+  margin: 0;
+  z-index: 10;
+  overflow: hidden; /* 关键：裁剪超出部分 */
+  height: 320px; /* 根据你想显示的高度调整 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.footer-content {
+  font-size: 1rem;
+  margin-top: 32px;
+  margin-bottom: 0;
+  z-index: 2;
+  position: relative;
+}
+
+.footer-logo {
+  position: absolute;
+  left: 0;
+  bottom: -120px; /* 只显示下半部分，可根据实际微调 */
+  width: 100vw;
+  font-size: 480px;
+  font-weight: 700;
+  opacity: 0.08;
+  letter-spacing: 0.1em;
+  user-select: none;
+  pointer-events: none;
+  line-height: 0.7;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+/* Research backgrounds: responsive sizing */
+.research-bg,
+.research-anim-bg {
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  max-height: 100vw;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* Responsive research item */
+.research-item {
+  min-height: 60vw;
+  max-width: 100vw;
+  padding: 0 1vw;
+}
+
+/* Responsive research title */
+.research-title {
+  font-size: 5vw;
+  width: 90vw;
+  min-height: 10vw;
+  padding: 0 2vw;
+}
+
+/* Responsive research number and divider */
+.research-num {
+  width: 7vw;
+  height: 7vw;
+  font-size: 2.5vw;
+  min-width: 32px;
+  min-height: 32px;
+  max-width: 48px;
+  max-height: 48px;
+}
+.research-inner-divider {
+  height: 12vw;
+  min-height: 48px;
+  max-height: 114px;
+}
+
+/* Responsive SVG animation for bg2 */
+.bg2 .research-anim-bg {
+  left: 50%;
+  top: 50%;
+  width: 80vw;
+  height: 80vw;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 240px;
+  min-height: 240px;
+  transform: translate(-50%, -50%) scale(1);
+  animation: anim-bg2-scale-in 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite
+    alternate;
+}
+
+/* Responsive for small screens */
+@media (max-width: 900px) {
+  .research-section h2 {
+    font-size: 10vw;
+  }
+  .research-list {
+    gap: 1vw;
+  }
+  .research-item {
+    min-height: 90vw;
+    margin: 32px 0;
+    padding: 32px 1vw;
+  }
+  .research-title {
+    font-size: 6vw;
+    width: 96vw;
+    min-height: 12vw;
+    padding: 0 1vw;
+  }
+  .research-num {
+    width: 9vw;
+    height: 9vw;
+    font-size: 3vw;
+  }
+  .research-inner-divider {
+    height: 8vw;
+  }
+  .research-bg,
+  .research-anim-bg {
+    width: 100vw;
+    height: 100vw;
+    min-width: 0;
+    min-height: 0;
+    max-width: 100vw;
+    max-height: 100vw;
+  }
+  .bg2 .research-anim-bg {
+    width: 90vw;
+    height: 90vw;
+    min-width: 120px;
+    min-height: 120px;
+  }
+}
+
+/* Responsive for very small screens */
+@media (max-width: 600px) {
+  .research-section h2 {
+    font-size: 12vw;
+  }
+  .research-title {
+    font-size: 8vw;
+    min-height: 16vw;
+  }
+  .research-num {
+    width: 12vw;
+    height: 12vw;
+    font-size: 4vw;
+  }
+  .bg2 .research-anim-bg {
+    width: 98vw;
+    height: 98vw;
+    min-width: 80px;
+    min-height: 80px;
+  }
+}
+
+/* Hero Section Responsive */
+@media (max-width: 900px) {
+  .hero {
+    min-height: 60vw;
+    padding: 0;
+  }
+  .hero-overlay {
+    padding-top: 8vw;
+    border-radius: 4vw;
+  }
+  .hero-top {
+    font-size: 3vw;
+    margin-bottom: 8vw;
+    padding-left: 4vw;
+    text-align: left;
+  }
+  .hero-overlay h1 {
+    font-size: 8vw;
+    padding-left: 4vw;
+    text-align: left;
+    margin-bottom: 2vw;
+  }
+  .hero-card {
+    font-size: 3vw;
+    padding: 2vw 4vw;
+    max-width: 90vw;
+    border-radius: 4vw;
+    margin-bottom: 3vw;
+  }
+  .hero-card h5 {
+    font-size: 2vw;
+    padding: 1vw 4vw;
+    margin-bottom: 3vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 90vw;
+  }
+  .hero-overlay {
+    padding-top: 12vw;
+    border-radius: 6vw;
+  }
+  .hero-top {
+    font-size: 5vw;
+    margin-bottom: 10vw;
+    padding-left: 0;
+    text-align: center;
+  }
+  .hero-overlay h1 {
+    font-size: 12vw;
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 4vw;
+  }
+  .hero-card {
+    font-size: 5vw;
+    padding: 4vw 2vw;
+    max-width: 98vw;
+    border-radius: 6vw;
+    margin-bottom: 3vw;
+  }
+  .hero-card h5 {
+    font-size: 3vw;
+    padding: 2vw 6vw;
+    margin-bottom: 6vw;
+  }
+}
+
+/* Footer Responsive */
+@media (max-width: 900px) {
+  footer {
+    height: 180px;
+    min-height: 100px;
+    padding: 0;
+  }
+  .footer-content {
+    font-size: 2.5vw;
+    margin-top: 24px;
+  }
+  .footer-logo {
+    font-size: 200px;
+    bottom: -60px;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    height: 100px;
+    min-height: 60px;
+    padding: 0;
+  }
+  .footer-content {
+    font-size: 4vw;
+    margin-top: 16px;
+  }
+  .footer-logo {
+    font-size: 80vw;
+    bottom: -24vw;
+  }
+}
