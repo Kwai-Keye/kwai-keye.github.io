@@ -1,0 +1,10 @@
+---
+layout:     post
+title:      "SVBENCH"
+subtitle:   "A BENCHMARK WITH TEMPORAL MULTITURN DIALOGUES FOR STREAMING VIDEO UNDERSTANDING"
+date:       2025-02-15
+author:     "Zhenyu Yang, Yuhang Hu, Zemin Du, Dizhan Xue, Shengsheng Qian, Jiahong Wu, Fan Yang, Weiming Dong, Changsheng Xu"
+img: "img/SVBENCH.jpg"
+---
+
+Despite significant advancements of Large Vision-Language Models (LVLMs) on established benchmarks, there remains a gap in evaluating their applicability in long-context streaming video understanding, as current video understanding benchmarks emphasize isolated single-instance text inputs and fail to assess the capacity to sustain temporal reasoning throughout video streams. To address this, we introduce **SVBench**, a benchmark with temporal multi-turn question-answering chains for thoroughly assessing streaming video understanding capabilities. Using a semi-automated annotation pipeline, we generate **49,979 Question-Answer (QA) pairs** from **1,353 streaming videos**, including QA chains representing consecutive multi-turn dialogues over video segments and temporal linkages between successive chains. Experimental results from **14 models** in dialogue and streaming evaluations reveal that while closed-source **GPT-4o** outperforms others, most open-source LVLMs struggle. We also construct **StreamingChat**, which significantly outperforms open-source LVLMs on SVBench while achieving comparable performance on diverse vision-language benchmarks. We expect SVBench to advance streaming video understanding research by providing comprehensive analysis, with our benchmark and model accessible at [https://yzy-bupt.github.io/SVBench](https://yzy-bupt.github.io/SVBench).

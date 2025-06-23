@@ -1,0 +1,11 @@
+---
+layout:     post
+title:      "MM-RLHF"
+subtitle:   "The Next Step Forward in Multimodal LLM Alignment"
+arxiv:     "https://arxiv.org/pdf/2502.10391"
+date:       2025-02-14
+author:     "Yi-Fan Zhang, Tao Yu, Haochen Tian, Chaoyou Fu, Peiyan Li, Jianshu Zeng, Wulin Xie, Yang Shi, Huanyu Zhang, Junkang Wu, Xue Wang, Yibo Hu, Bin Wen, Fan Yang, Zhang Zhang, Tingting Gao, Di Zhang, Liang Wang, Rong Jin, Tieniu Tan"
+img: "img/MM-RLHF.jpg"
+---
+
+Despite notable advancements in Multimodal Large Language Models (MLLMs), most state-of-the-art models lack thorough alignment with human preferences, as current alignment research focuses on narrow areas (e.g., hallucination reduction) without exploring whether systematic preference alignment enhances overall capability. To address this, we introduce **MM-RLHF**—a dataset of **120k fine-grained, human-annotated preference comparison pairs** surpassing existing resources in size, diversity, annotation granularity, and quality. Leveraging this, we propose key innovations: 1) a **Critique-Based Reward Model** that generates interpretable critiques before scoring outputs, providing more informative feedback than scalar rewards; and 2) **Dynamic Reward Scaling**, which optimizes training by adjusting sample loss weights according to reward signals. Rigorously evaluated across **10 dimensions and 27 benchmarks**, our approach demonstrates consistent improvements—fine-tuning LLaVA-ov-7B yields **19.5% higher conversational ability** and **60% better safety**.

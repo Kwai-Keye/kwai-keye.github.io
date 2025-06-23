@@ -1,0 +1,142 @@
+---
+layout: page
+description: "Exploring AI Frontiers, Forging Multimodal Futures."
+---
+
+<div style="
+  text-align: center;
+  max-width: 2200px;
+  margin: 40px auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f7fb 100%);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(140, 180, 220, 0.15);
+  border: 1px solid #e3edf7;
+  color: #3a506b;
+  font-size: 1.1em;
+  line-height: 1.6;
+">
+  <span style="
+    display: block;
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 18px;
+    background: linear-gradient(45deg, #5a8fd8, #3a5f95);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+">Welcome to Kwai Keye</span>
+  <div style="text-align: left;">Our team is dedicated to pushing the boundaries of artificial intelligence, focusing on the cutting-edge exploration and innovative practice of multimodal large language models.  We believe that intelligent agents integrating multisource data—such as vision, language, and behavior—are key to unlocking deeper cognition and decision-making.  Our research focuses on: short video understanding;  multimodal recommendation;  reinforcement learning (RL) algorithms;  and unified multimodal understanding and generation models.</div>
+</div>
+
+<h1 style="
+  text-align: left;
+  position: relative;
+  padding-bottom: 15px;
+  margin: 40px 0 30px;
+  color: #4a6583;
+  font-size: 2.2em;
+  font-weight: 600;
+">
+  Recent Researches
+  <span style="
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 80px;
+    background: linear-gradient(90deg, #a0c0e0, #6a9bd8);
+    border-radius: 3px;
+  "></span>
+</h1>
+
+<div style="
+  margin: 0 0 25px 0;
+  color: #5a6d80;
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-width: 800px;
+">
+  Below are seven of our recent papers.
+</div>
+
+{% for post in paginator.posts %}
+<div class="post-preview-container">
+
+    <div class="post-preview-content">
+        <a href="{{ post.arxiv }}" class="post-preview-link">
+            <div class="post-preview">
+                <h2 class="post-title">
+                    {{ post.title }}
+                </h2>
+                {% if post.subtitle %}
+                <h3 class="post-subtitle">
+                    {{ post.subtitle }}
+                </h3>
+                {% endif %}
+                <div class="post-content-preview">
+                    {% if post.lang == 'en' %}
+                        {{ post.content | strip_html | truncate:300 }}
+                    {% else %}
+                        {{ post.content | strip_html | truncate:200 }}
+                    {% endif %}
+                </div>
+            </div>
+        </a>
+<!--         <p class="post-meta">
+            Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+        </p> -->
+    </div>
+  
+  <div class="post-preview-image">
+        <a href="{{ post.arxiv }}">
+            <img src="{{ post.img | prepend: site.baseurl }}" alt="{{ post.title }}">
+        </a>
+    </div>
+</div>
+<hr>
+{% endfor %}
+
+
+<!-- {% for post in paginator.posts %}
+<a href="{{ post.arxiv }}" class="post-preview-link">
+    <div class="post-preview">
+        <h2 class="post-title">
+            {{ post.title }}
+        </h2>
+        {% if post.subtitle %}
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
+        </h3>
+        {% endif %}
+        <div class="post-content-preview">
+            {% if post.lang == 'en' %}
+                {{ post.content | strip_html | truncate:300 }}
+            {% else %}
+                {{ post.content | strip_html | truncate:200 }}
+            {% endif %}
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+    </p>
+</div>
+<hr>
+{% endfor %} -->
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}
