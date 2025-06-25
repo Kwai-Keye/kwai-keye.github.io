@@ -44,7 +44,7 @@ body {
 .hero-video-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.25); /* Adjust opacity as needed */
+  background: rgba(0, 0, 0, 0.1); /* Adjust opacity as needed */
   z-index: 1;
   pointer-events: none;
 }
@@ -81,11 +81,11 @@ body {
   margin: 0 auto;
   border-radius: 32px;
   padding: 12px 24px;
-  max-width: 800px;
+  max-width: 720px;
   max-height: 467px;
   margin-top: 6vh;
   margin-bottom: 3vw;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 300;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(6px);
@@ -101,7 +101,7 @@ body {
   border-radius: 32px;
   background: url("asset/Liquid glass button.png") center center / cover
     no-repeat;
-  opacity: 0.1; /* 这里调整透明度，0~1之间 */
+  opacity: 0.05; /* 这里调整透明度，0~1之间 */
   z-index: 0;
   pointer-events: none;
 }
@@ -353,7 +353,7 @@ body {
   display: flex;
   align-items: left;
   justify-content: center;
-  margin-left: 10vw;
+  margin-left: 5vw;
 }
 .research-content {
   position: relative;
@@ -373,9 +373,9 @@ body {
   flex-direction: column; /* Stack vertically */
   align-items: flex-start; /* Align left */
   justify-content: flex-start;
-  padding: 0 24vw;
+  padding: 0 18vw;
   margin: 0 auto;
-  gap: 24px; /* Space between title and button */
+  gap: 12px; /* Space between title and button */
 }
 .research-title-image {
   width: 50vw; /* 你可以调整为你想要的正方形尺寸 */
@@ -389,19 +389,19 @@ body {
   position: relative;
   z-index: 2;
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.01em;
   line-height: 1.3;
   background: transparent;
 
   text-align: left;
-  width: 50vw;
-  min-height: 10vw; /* 可选，保证有基础高度 */
+  width: 70vw;
+
   height: auto; /* 让高度自适应内容 */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   margin: 0 auto;
   box-sizing: border-box;
   color: #111;
@@ -412,6 +412,17 @@ body {
   -webkit-background-clip: initial;
   background-clip: initial;
   -webkit-text-fill-color: initial;
+}
+.research-abstract {
+  position: relative;
+  z-index: 2;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #111;
+  line-height: 1.6;
+  margin-top: 16px;
+  max-width: 80vw; /* 控制最大宽度 */
+  text-align: left; /* 左对齐 */
 }
 .research-title-text,
 .research-title-button {
