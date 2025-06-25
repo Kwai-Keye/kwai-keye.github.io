@@ -413,6 +413,9 @@ body {
   background-clip: initial;
   -webkit-text-fill-color: initial;
 }
+.research-conference-text {
+  color: #575757;
+}
 .research-abstract {
   position: relative;
   z-index: 2;
