@@ -49,12 +49,12 @@
       <div class="focus-list">
         <div class="focus-item">
           <img src="asset/online-video.png" alt="" class="focus-svg" />
-          <div class="focus-text">Short-form video understanding</div>
+          <div class="focus-text">Video Understanding</div>
         </div>
         <div class="focus-divider"></div>
         <div class="focus-item">
           <img src="asset/feedback.png" alt="" class="focus-svg" />
-          <div class="focus-text">Multimodal recommendation</div>
+          <div class="focus-text">Multimodal Large Language Model</div>
         </div>
         <div class="focus-divider"></div>
         <div class="focus-item">
@@ -63,12 +63,12 @@
             alt=""
             class="focus-svg"
           />
-          <div class="focus-text">Reinforcement learning (RL)</div>
+          <div class="focus-text">Reinforcement Learning</div>
         </div>
         <div class="focus-divider"></div>
         <div class="focus-item">
           <img src="asset/mode.png" alt="" class="focus-svg" />
-          <div class="focus-text">Unified multimodal models</div>
+          <div class="focus-text">Large Language Model Applications</div>
         </div>
       </div>
     </section>
@@ -78,14 +78,60 @@
       <h2>Recent Research</h2>
       <div class="research-list">
         <div class="research-item">
+          <div class="research-bg bg6"></div>
+          <div class="research-num">01 /</div>
+          <div class="research-title-container">
+            <div class="research-title-text">
+              <span class="research-title">
+                MM-RLHF: The Next Step Forward in Multimodal LLM Alignment (ICML
+                2025)
+              </span>
+            </div>
+
+            <div class="research-abstract">
+              <p>
+                Despite notable advancements in Multimodal Large Language Models
+                (MLLMs), most state-of-the-art models lack thorough alignment
+                with human preferences, as current alignment research focuses on
+                narrow areas (e.g., hallucination reduction) without exploring
+                whether systematic preference alignment enhances overall
+                capability. To address this, we introduce MM-RLHF—a dataset of
+                120k fine-grained, human-annotated preference comparison pairs
+                surpassing existing resources in size, diversity, annotation
+                granularity, and quality. Leveraging this, we propose key
+                innovations: 1) a Critique-Based Reward Model that generates
+                interpretable critiques before scoring outputs, providing more
+                informative feedback than scalar rewards; and 2) Dynamic Reward
+                Scaling, which optimizes training by adjusting sample loss
+                weights according to reward signals. Rigorously evaluated across
+                10 dimensions and 27 benchmarks, our approach demonstrates
+                consistent improvements—fine-tuning LLaVA-ov-7B yields 19.5%
+                higher conversational ability and 60% better safety.
+              </p>
+            </div>
+            <div class="research-title-button">
+              <a href="https://arxiv.org/pdf/2502.10391" target="_blank">
+                <button type="button" class="btn btn-dark">View More</button>
+              </a>
+            </div>
+            <div class="research-img">
+              <img
+                src="asset/MM-RLHF.jpg"
+                alt="MM-RLHF"
+                class="research-title-image"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="research-item">
           <div class="research-bg bg1"></div>
-          <div class="research-num">01 / <br /></div>
+          <div class="research-num">02 / <br /></div>
           <div class="research-content">
             <div class="research-title-container">
               <div class="research-title-text">
                 <span class="research-title">
-                  VLM AS POLICY: COMMON-LAW CONTENT MODERATION FRAMEWORK FOR
-                  SHORT VIDEO PLATFORM (KDD 2025)
+                  VLM as Policy: Common-Law Content Moderation Framework for
+                  Short Video Platform (KDD 2025)
                 </span>
               </div>
 
@@ -129,14 +175,15 @@
             </div>
           </div>
         </div>
+
         <div class="research-item">
           <div class="research-bg bg2"></div>
-          <div class="research-num">02 /</div>
+          <div class="research-num">03 /</div>
           <div class="research-title-container">
             <div class="research-title-text">
               <span class="research-title">
-                CoMM: A COHERENT INTERLEAVED IMAGE-TEXT DATASET FOR MULTIMODAL
-                UNDERSTANDING AND GENERATION (CVPR 2025)
+                CoMM: A Coherent Interleaved Image-Text Dataset for Multimodal
+                Understanding and Generation (CVPR 2025)
               </span>
             </div>
 
@@ -177,14 +224,68 @@
             </div>
           </div>
         </div>
+
         <div class="research-item">
-          <div class="research-bg bg3"></div>
-          <div class="research-num">03 /</div>
+          <div class="research-bg bg7"></div>
+          <div class="research-num">04 /</div>
           <div class="research-title-container">
             <div class="research-title-text">
               <span class="research-title">
-                STGC: SOLVING TOKEN GRADIENT CONFLICT IN MIXTURE-OF-EXPERTS FOR
-                LARGE VISION-LANGUAGE MODEL (ICLR 2025)
+                LibraMerging: Importance-Redundancy and Pruning-Merging TradeOff
+                for Acceleration Plugin in Large VisionLanguage Model (CVPR
+                2025)
+              </span>
+            </div>
+
+            <div class="research-abstract">
+              <p>
+                Large Vision-Language Models (LVLMs) have achieved significant
+                progress, but expensive inference costs limit realistic
+                deployment. While existing works compress visual tokens by
+                identifying important non-redundant tokens as targets
+                (pruning/merging others), they face two dilemmas: 1) the token
+                importance-redundancy dilemma in target token identification,
+                and 2) the conflict between disrupting target token information
+                and losing non-target token information during merging/pruning.
+                To solve these, we propose Libra-Merging—a novel visual token
+                compression scheme. For target token identification, it selects
+                the most important tokens from spatially discrete intervals,
+                achieving more robust importance-redundancy trade-offs than
+                hyper-parameter-dependent methods. During token compression, it
+                avoids merging non-target tokens dissimilar to targets
+                (preventing target information disruption) while condensing them
+                into an information compensation token to retain critical
+                non-target information. Serving as a plug-in for diverse LVLMs,
+                extensive experiments demonstrate its effectiveness, with code
+                available at https://github.com/longrongyang/Libra-Merging.
+              </p>
+            </div>
+            <div class="research-title-button">
+              <a
+                href="https://openaccess.thecvf.com/content/CVPR2025/supplemental/Yang_Libra-Merging_Importance-redundancy_and_CVPR_2025_supplemental.pdf"
+                target="_blank"
+              >
+                <button type="button" class="btn btn-dark">View More</button>
+              </a>
+            </div>
+            <div class="research-img">
+              <img
+                src="asset/Libra-Merging.jpg"
+                alt="Libra-Merging"
+                class="research-title-image"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="research-item">
+          <div class="research-bg bg3"></div>
+          <div class="research-num">05 /</div>
+          <div class="research-title-container">
+            <div class="research-title-text">
+              <span class="research-title">
+                STGC: Solving Token Gradient Conflict in Mixture-of-Experts for
+                Large Vision-Language Model (ICLR 2025)
               </span>
             </div>
 
@@ -222,14 +323,15 @@
             </div>
           </div>
         </div>
+
         <div class="research-item">
           <div class="research-bg bg4"></div>
-          <div class="research-num">04 /</div>
+          <div class="research-num">06 /</div>
           <div class="research-title-container">
             <div class="research-title-text">
               <span class="research-title">
-                SVBENCH: A BENCHMARK WITH TEMPORAL MULTITURN DIALOGUES FOR
-                STREAMING VIDEO UNDERSTANDING (ICLR 2025)
+                SVBENCH: A Benchmark with Temporal Multiturn Dialogues for
+                Streaming Video Understanding (ICLR 2025)
               </span>
             </div>
 
@@ -273,14 +375,15 @@
             </div>
           </div>
         </div>
+
         <div class="research-item">
           <div class="research-bg bg5"></div>
-          <div class="research-num">05 /</div>
+          <div class="research-num">07 /</div>
           <div class="research-title-container">
             <div class="research-title-text">
               <span class="research-title">
-                TASKGALAXY: SCALING MULTI-MODAL INSTRUCTION FINE-TUNING WITH
-                TENS OF THOUSANDS VISION TASK TYPES (ICLR 2025)
+                TASKGALAXY: Scaling Multi-Modal Instruction Fine-Tuning with
+                Tens of Thousands Vision Task Types (ICLR 2025)
               </span>
             </div>
 
@@ -316,104 +419,6 @@
               <img
                 src="asset/TASKGALAXY.jpg"
                 alt="TASKGALAXY"
-                class="research-title-image"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="research-item">
-          <div class="research-bg bg6"></div>
-          <div class="research-num">06 /</div>
-          <div class="research-title-container">
-            <div class="research-title-text">
-              <span class="research-title">
-                MM-RLHF: THE NEXT STEP FORWARD IN MULTIMODAL LLM ALIGNMENT (ICLR
-                2025)
-              </span>
-            </div>
-
-            <div class="research-abstract">
-              <p>
-                Despite notable advancements in Multimodal Large Language Models
-                (MLLMs), most state-of-the-art models lack thorough alignment
-                with human preferences, as current alignment research focuses on
-                narrow areas (e.g., hallucination reduction) without exploring
-                whether systematic preference alignment enhances overall
-                capability. To address this, we introduce MM-RLHF—a dataset of
-                120k fine-grained, human-annotated preference comparison pairs
-                surpassing existing resources in size, diversity, annotation
-                granularity, and quality. Leveraging this, we propose key
-                innovations: 1) a Critique-Based Reward Model that generates
-                interpretable critiques before scoring outputs, providing more
-                informative feedback than scalar rewards; and 2) Dynamic Reward
-                Scaling, which optimizes training by adjusting sample loss
-                weights according to reward signals. Rigorously evaluated across
-                10 dimensions and 27 benchmarks, our approach demonstrates
-                consistent improvements—fine-tuning LLaVA-ov-7B yields 19.5%
-                higher conversational ability and 60% better safety.
-              </p>
-            </div>
-            <div class="research-title-button">
-              <a href="https://arxiv.org/pdf/2502.10391" target="_blank">
-                <button type="button" class="btn btn-dark">View More</button>
-              </a>
-            </div>
-            <div class="research-img">
-              <img
-                src="asset/MM-RLHF.jpg"
-                alt="MM-RLHF"
-                class="research-title-image"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="research-item">
-          <div class="research-bg bg7"></div>
-          <div class="research-num">07 /</div>
-          <div class="research-title-container">
-            <div class="research-title-text">
-              <span class="research-title">
-                Libra-Merging: IMPORTANCE-REDUNDANCY AND PRUNING-MERGING
-                TRADE-OFF FOR ACCELERATION PLUG-IN IN LARGE VISION-LANGUAGE
-                MODEL (CVPR 2025)
-              </span>
-            </div>
-
-            <div class="research-abstract">
-              <p>
-                Large Vision-Language Models (LVLMs) have achieved significant
-                progress, but expensive inference costs limit realistic
-                deployment. While existing works compress visual tokens by
-                identifying important non-redundant tokens as targets
-                (pruning/merging others), they face two dilemmas: 1) the token
-                importance-redundancy dilemma in target token identification,
-                and 2) the conflict between disrupting target token information
-                and losing non-target token information during merging/pruning.
-                To solve these, we propose Libra-Merging—a novel visual token
-                compression scheme. For target token identification, it selects
-                the most important tokens from spatially discrete intervals,
-                achieving more robust importance-redundancy trade-offs than
-                hyper-parameter-dependent methods. During token compression, it
-                avoids merging non-target tokens dissimilar to targets
-                (preventing target information disruption) while condensing them
-                into an information compensation token to retain critical
-                non-target information. Serving as a plug-in for diverse LVLMs,
-                extensive experiments demonstrate its effectiveness, with code
-                available at https://github.com/longrongyang/Libra-Merging.
-              </p>
-            </div>
-            <div class="research-title-button">
-              <a
-                href="https://openaccess.thecvf.com/content/CVPR2025/supplemental/Yang_Libra-Merging_Importance-redundancy_and_CVPR_2025_supplemental.pdf"
-                target="_blank"
-              >
-                <button type="button" class="btn btn-dark">View More</button>
-              </a>
-            </div>
-            <div class="research-img">
-              <img
-                src="asset/Libra-Merging.jpg"
-                alt="Libra-Merging"
                 class="research-title-image"
               />
             </div>
