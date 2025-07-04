@@ -21,6 +21,26 @@
     <!-- Hero Section -->
     <header class="site-header">
       <img src="asset/logo-black.png" alt="Kwai Keye Logo" class="site-logo" />
+      <div class="header-icons">
+        <a
+          href="https://huggingface.co/papers/2507.01949"
+          target="_blank"
+          class="header-link"
+          >Technical Report</a
+        >
+        <a
+          href="https://huggingface.co/Kwai-Keye"
+          target="_blank"
+          class="header-link"
+          >Models</a
+        >
+        <a
+          href="https://huggingface.co/spaces/Kwai-Keye/Keye-VL-8B-Preview"
+          target="_blank"
+          class="header-link"
+          >Demo</a
+        >
+      </div>
     </header>
     <section class="hero">
       <!-- 替换视频为图片 -->
@@ -436,5 +456,18 @@
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
+    <script>
+      window.addEventListener("scroll", function () {
+        const focusSection = document.querySelector(".focus-section");
+        const headerLinks = document.querySelectorAll(".header-link");
+        const focusTop =
+          focusSection.getBoundingClientRect().top + window.scrollY;
+        if (window.scrollY + 64 >= focusTop) {
+          headerLinks.forEach((link) => link.classList.add("scrolled"));
+        } else {
+          headerLinks.forEach((link) => link.classList.remove("scrolled"));
+        }
+      });
+    </script>
   </body>
 </html>
